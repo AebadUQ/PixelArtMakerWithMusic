@@ -1,1328 +1,729 @@
-let prebuilt = {
-  mario: [
-    { x: 7, y: 0, color: "#500000" },
-    { x: 8, y: 0, color: "#500000" },
-    { x: 9, y: 0, color: "#500000" },
-    { x: 10, y: 0, color: "#500000" },
-    { x: 11, y: 0, color: "#500000" },
-
-    { x: 5, y: 1, color: "#500000" },
-    { x: 6, y: 1, color: "#500000" },
-    { x: 7, y: 1, color: "#f84070" },
-    { x: 8, y: 1, color: "#f84070" },
-    { x: 9, y: 1, color: "#f8d870" },
-    { x: 10, y: 1, color: "#f84070" },
-    { x: 11, y: 1, color: "#500000" },
-    { x: 12, y: 1, color: "#500000" },
-
-    { x: 4, y: 2, color: "#500000" },
-    { x: 5, y: 2, color: "#f84070" },
-    { x: 6, y: 2, color: "#f84070" },
-    { x: 7, y: 2, color: "#b02860" },
-    { x: 8, y: 2, color: "#b02860" },
-    { x: 9, y: 2, color: "#d8a038" },
-    { x: 10, y: 2, color: "#f8d870" },
-    { x: 11, y: 2, color: "#ffffff" },
-    { x: 12, y: 2, color: "#500000" },
-
-    { x: 3, y: 3, color: "#500000" },
-    { x: 4, y: 3, color: "#b02860" },
-    { x: 5, y: 3, color: "#f84070" },
-    { x: 6, y: 3, color: "#b02860" },
-    { x: 7, y: 3, color: "#b02860" },
-    { x: 8, y: 3, color: "#000000" },
-    { x: 9, y: 3, color: "#000000" },
-    { x: 10, y: 3, color: "#000000" },
-    { x: 11, y: 3, color: "#000000" },
-    { x: 12, y: 3, color: "#000000" },
-    { x: 13, y: 3, color: "#000000" },
-
-    { x: 2, y: 4, color: "#500000" },
-    { x: 3, y: 4, color: "#b02860" },
-    { x: 4, y: 4, color: "#b02860" },
-    { x: 5, y: 4, color: "#b02860" },
-    { x: 6, y: 4, color: "#000000" },
-    { x: 7, y: 4, color: "#000000" },
-    { x: 8, y: 4, color: "#000000" },
-    { x: 9, y: 4, color: "#000000" },
-    { x: 10, y: 4, color: "#000000" },
-    { x: 11, y: 4, color: "#000000" },
-    { x: 12, y: 4, color: "#000000" },
-    { x: 13, y: 4, color: "#000000" },
-    { x: 14, y: 4, color: "#000000" },
-
-    { x: 2, y: 5, color: "#500000" },
-    { x: 3, y: 5, color: "#f8d0c0" },
-    { x: 4, y: 5, color: "#000000" },
-    { x: 5, y: 5, color: "#000000" },
-    { x: 6, y: 5, color: "#000000" },
-    { x: 7, y: 5, color: "#f87068" },
-    { x: 8, y: 5, color: "#000000" },
-    { x: 9, y: 5, color: "#f87068" },
-    { x: 10, y: 5, color: "#000000" },
-    { x: 11, y: 5, color: "#f87068" },
-
-    { x: 1, y: 6, color: "#500000" },
-    { x: 2, y: 6, color: "#f8d0c0" },
-    { x: 3, y: 6, color: "#885818" },
-    { x: 4, y: 6, color: "#f8d0c0" },
-    { x: 5, y: 6, color: "#000000" },
-    { x: 6, y: 6, color: "#f87068" },
-    { x: 7, y: 6, color: "#f8d0c0" },
-    { x: 8, y: 6, color: "#000000" },
-    { x: 9, y: 6, color: "#f8d0c0" },
-    { x: 10, y: 6, color: "#000000" },
-    { x: 11, y: 6, color: "#f8d0c0" },
-    { x: 12, y: 6, color: "#885818" },
-    { x: 13, y: 6, color: "#885818" },
-
-    { x: 1, y: 7, color: "#500000" },
-    { x: 2, y: 7, color: "#f87068" },
-    { x: 3, y: 7, color: "#885818" },
-    { x: 4, y: 7, color: "#f8d0c0" },
-    { x: 5, y: 7, color: "#000000" },
-    { x: 6, y: 7, color: "#000000" },
-    { x: 7, y: 7, color: "#f8d0c0" },
-    { x: 8, y: 7, color: "#f8d0c0" },
-    { x: 9, y: 7, color: "#f8d0c0" },
-    { x: 10, y: 7, color: "#f8d0c0" },
-    { x: 11, y: 7, color: "#f8d0c0" },
-    { x: 12, y: 7, color: "#f8d0c0" },
-    { x: 13, y: 7, color: "#f8d0c0" },
-    { x: 14, y: 7, color: "#885818" },
-
-    { x: 1, y: 8, color: "#500000" },
-    { x: 2, y: 8, color: "#000000" },
-    { x: 3, y: 8, color: "#f87068" },
-    { x: 4, y: 8, color: "#f8d0c0" },
-    { x: 5, y: 8, color: "#000000" },
-    { x: 6, y: 8, color: "#f8d0c0" },
-    { x: 7, y: 8, color: "#f8d0c0" },
-    { x: 8, y: 8, color: "#000000" },
-    { x: 9, y: 8, color: "#f87068" },
-    { x: 10, y: 8, color: "#f87068" },
-    { x: 11, y: 8, color: "#f87068" },
-    { x: 12, y: 8, color: "#f87068" },
-    { x: 13, y: 8, color: "#f87068" },
-    { x: 14, y: 8, color: "#885818" },
-
-    { x: 2, y: 9, color: "#000000" },
-    { x: 3, y: 9, color: "#885818" },
-    { x: 4, y: 9, color: "#885818" },
-    { x: 5, y: 9, color: "#f87068" },
-    { x: 6, y: 9, color: "#f87068" },
-    { x: 7, y: 9, color: "#f87068" },
-    { x: 8, y: 9, color: "#000000" },
-    { x: 9, y: 9, color: "#000000" },
-    { x: 10, y: 9, color: "#000000" },
-    { x: 11, y: 9, color: "#000000" },
-    { x: 12, y: 9, color: "#000000" },
-    { x: 13, y: 9, color: "#000000" },
-
-    { x: 3, y: 10, color: "#000000" },
-    { x: 4, y: 10, color: "#885818" },
-    { x: 5, y: 10, color: "#885818" },
-    { x: 6, y: 10, color: "#f87068" },
-    { x: 7, y: 10, color: "#f87068" },
-    { x: 8, y: 10, color: "#000000" },
-    { x: 9, y: 10, color: "#000000" },
-    { x: 10, y: 10, color: "#000000" },
-    { x: 11, y: 10, color: "#000000" },
-
-    { x: 4, y: 11, color: "#500000" },
-    { x: 5, y: 11, color: "#b02860" },
-    { x: 6, y: 11, color: "#885818" },
-    { x: 7, y: 11, color: "#885818" },
-    { x: 8, y: 11, color: "#885818" },
-    { x: 9, y: 11, color: "#885818" },
-    { x: 10, y: 11, color: "#203088" },
-
-    { x: 3, y: 12, color: "#500000" },
-    { x: 4, y: 12, color: "#b02860" },
-    { x: 5, y: 12, color: "#b02860" },
-    { x: 6, y: 12, color: "#f84070" },
-    { x: 7, y: 12, color: "#408098" },
-    { x: 8, y: 12, color: "#408098" },
-    { x: 9, y: 12, color: "#80d8c8" },
-    { x: 10, y: 12, color: "#80d8c8" },
-    { x: 11, y: 12, color: "#203088" },
-
-    { x: 3, y: 13, color: "#500000" },
-    { x: 4, y: 13, color: "#885818" },
-    { x: 5, y: 13, color: "#885818" },
-    { x: 6, y: 13, color: "#885818" },
-    { x: 7, y: 13, color: "#408098" },
-    { x: 8, y: 13, color: "#ffffff" },
-    { x: 9, y: 13, color: "#ffffff" },
-    { x: 10, y: 13, color: "#80d8c8" },
-    { x: 11, y: 13, color: "#ffffff" },
-    { x: 12, y: 13, color: "#203088" },
-
-    { x: 3, y: 14, color: "#885818" },
-    { x: 4, y: 14, color: "#ffffff" },
-    { x: 5, y: 14, color: "#ffffff" },
-    { x: 6, y: 14, color: "#ffffff" },
-    { x: 7, y: 14, color: "#885818" },
-    { x: 8, y: 14, color: "#ffffff" },
-    { x: 9, y: 14, color: "#ffffff" },
-    { x: 10, y: 14, color: "#80d8c8" },
-    { x: 11, y: 14, color: "#ffffff" },
-    { x: 12, y: 14, color: "#203088" },
-
-    { x: 3, y: 15, color: "#885818" },
-    { x: 4, y: 15, color: "#ffffff" },
-    { x: 5, y: 15, color: "#ffffff" },
-    { x: 6, y: 15, color: "#885818" },
-    { x: 7, y: 15, color: "#408098" },
-    { x: 8, y: 15, color: "#408098" },
-    { x: 9, y: 15, color: "#203088" },
-    { x: 10, y: 15, color: "#408098" },
-    { x: 11, y: 15, color: "#203088" },
-
-    { x: 3, y: 16, color: "#885818" },
-    { x: 4, y: 16, color: "#ffffff" },
-    { x: 5, y: 16, color: "#ffffff" },
-    { x: 6, y: 16, color: "#885818" },
-    { x: 7, y: 16, color: "#408098" },
-    { x: 8, y: 16, color: "#203088" },
-    { x: 9, y: 16, color: "#408098" },
-    { x: 10, y: 16, color: "#203088" },
-
-    { x: 4, y: 17, color: "#885818" },
-    { x: 5, y: 17, color: "#885818" },
-    { x: 6, y: 17, color: "#885818" },
-    { x: 7, y: 17, color: "#885818" },
-    { x: 8, y: 17, color: "#000000" },
-    { x: 9, y: 17, color: "#885818" },
-    { x: 10, y: 17, color: "#000000" },
-
-    { x: 4, y: 18, color: "#000000" },
-    { x: 5, y: 18, color: "#885818" },
-    { x: 6, y: 18, color: "#885818" },
-    { x: 7, y: 18, color: "#885818" },
-    { x: 8, y: 18, color: "#f8d870" },
-    { x: 9, y: 18, color: "#000000" },
-    { x: 10, y: 18, color: "#f8d870" },
-    { x: 11, y: 18, color: "#000000" },
-
-    { x: 4, y: 19, color: "#000000" },
-    { x: 5, y: 19, color: "#000000" },
-    { x: 6, y: 19, color: "#000000" },
-    { x: 7, y: 19, color: "#000000" },
-    { x: 8, y: 19, color: "#000000" },
-    { x: 9, y: 19, color: "#000000" },
-    { x: 10, y: 19, color: "#000000" },
-    { x: 11, y: 19, color: "#000000" },
-  ],
-  babomb: [
-    { x: 8, y: 0, color: "#c37200" },
-
-    { x: 4, y: 1, color: "#c77100" },
-    { x: 5, y: 1, color: "#c77100" },
-    { x: 6, y: 1, color: "#556282" },
-    { x: 7, y: 1, color: "#914708" },
-
-    { x: 4, y: 2, color: "#c76e06" },
-    { x: 5, y: 2, color: "#fcee43" },
-    { x: 6, y: 2, color: "#fcee43" },
-    { x: 7, y: 2, color: "#f8c206" },
-    { x: 8, y: 2, color: "#d16d00" },
-
-    { x: 5, y: 3, color: "#cc6e00" },
-    { x: 6, y: 3, color: "#fbed42" },
-    { x: 7, y: 3, color: "#fbed42" },
-    { x: 8, y: 3, color: "#fbc106" },
-    { x: 9, y: 3, color: "#c47400" },
-
-    { x: 3, y: 4, color: "#924a00" },
-    { x: 4, y: 4, color: "#c67100" },
-    { x: 5, y: 4, color: "#ffbf01" },
-    { x: 6, y: 4, color: "#fbee40" },
-    { x: 7, y: 4, color: "#ffc000" },
-    { x: 8, y: 4, color: "#9e4203" },
-    { x: 9, y: 4, color: "#1b161a" },
-
-    { x: 4, y: 5, color: "#a53f01" },
-    { x: 5, y: 5, color: "#cc690b" },
-    { x: 6, y: 5, color: "#f6c403" },
-    { x: 9, y: 5, color: "#22304b" },
-
-    { x: 7, y: 6, color: "#223148" },
-    { x: 8, y: 6, color: "#586084" },
-    { x: 9, y: 6, color: "#9fa5bb" },
-    { x: 10, y: 6, color: "#9fa5bb" },
-    { x: 11, y: 6, color: "#5a5f85" },
-
-    { x: 5, y: 7, color: "#23314c" },
-    { x: 6, y: 7, color: "#23314c" },
-    { x: 7, y: 7, color: "#5a5f87" },
-    { x: 8, y: 7, color: "#a1a6ba" },
-    { x: 9, y: 7, color: "#ffffff" },
-    { x: 10, y: 7, color: "#ffffff" },
-    { x: 11, y: 7, color: "#9fa7ba" },
-    { x: 12, y: 7, color: "#5a6084" },
-
-    { x: 4, y: 8, color: "#23314c" },
-    { x: 5, y: 8, color: "#23314c" },
-    { x: 6, y: 8, color: "#5a5f85" },
-    { x: 7, y: 8, color: "#292a2e" },
-    { x: 8, y: 8, color: "#414141" },
-    { x: 9, y: 8, color: "#414141" },
-    { x: 10, y: 8, color: "#414141" },
-    { x: 11, y: 8, color: "#2b2b29" },
-    { x: 12, y: 8, color: "#5a5f85" },
-    { x: 13, y: 8, color: "#5a5f85" },
-
-    { x: 3, y: 9, color: "#23314c" },
-    { x: 4, y: 9, color: "#5a5d8a" },
-    { x: 5, y: 9, color: "#1c180f" },
-    { x: 6, y: 9, color: "#262827" },
-    { x: 7, y: 9, color: "#424242" },
-    { x: 8, y: 9, color: "#424242" },
-    { x: 9, y: 9, color: "#666666" },
-    { x: 10, y: 9, color: "#666666" },
-    { x: 11, y: 9, color: "#424242" },
-    { x: 12, y: 9, color: "#424242" },
-    { x: 13, y: 9, color: "#2a2a2a" },
-
-    { x: 3, y: 10, color: "#21314b" },
-    { x: 4, y: 10, color: "#171717" },
-    { x: 5, y: 10, color: "#2a2a2a" },
-    { x: 6, y: 10, color: "#424242" },
-    { x: 7, y: 10, color: "#424242" },
-    { x: 8, y: 10, color: "#666666" },
-    { x: 9, y: 10, color: "#666666" },
-    { x: 10, y: 10, color: "#666666" },
-    { x: 11, y: 10, color: "#666666" },
-    { x: 12, y: 10, color: "#424242" },
-    { x: 13, y: 10, color: "#424242" },
-    { x: 14, y: 10, color: "#2b2b2b" },
-
-    { x: 3, y: 11, color: "#191919" },
-    { x: 4, y: 11, color: "#2a2a2a" },
-    { x: 5, y: 11, color: "#2a2a2a" },
-    { x: 6, y: 11, color: "#424242" },
-    { x: 7, y: 11, color: "#424242" },
-    { x: 8, y: 11, color: "#666666" },
-    { x: 9, y: 11, color: "#666666" },
-    { x: 10, y: 11, color: "#5a5f85" },
-    { x: 11, y: 11, color: "#656565" },
-    { x: 12, y: 11, color: "#656565" },
-    { x: 13, y: 11, color: "#434240" },
-    { x: 14, y: 11, color: "#5a5f85" },
-    { x: 15, y: 11, color: "#2e2e2e" },
-
-    { x: 3, y: 12, color: "#2a2a2a" },
-    { x: 4, y: 12, color: "#2a2a2a" },
-    { x: 5, y: 12, color: "#2a2a2a" },
-    { x: 6, y: 12, color: "#424242" },
-    { x: 7, y: 12, color: "#424242" },
-    { x: 8, y: 12, color: "#666666" },
-    { x: 9, y: 12, color: "#585d94" },
-    { x: 10, y: 12, color: "#ffffff" },
-    { x: 11, y: 12, color: "#9fa7ba" },
-    { x: 12, y: 12, color: "#696562" },
-    { x: 13, y: 12, color: "#586084" },
-    { x: 14, y: 12, color: "#ffffff" },
-    { x: 15, y: 12, color: "#454641" },
-
-    { x: 2, y: 13, color: "#171717" },
-    { x: 3, y: 13, color: "#2a2a2a" },
-    { x: 4, y: 13, color: "#2a2a2a" },
-    { x: 5, y: 13, color: "#2a2a2a" },
-    { x: 6, y: 13, color: "#424242" },
-    { x: 7, y: 13, color: "#424242" },
-    { x: 8, y: 13, color: "#666666" },
-    { x: 9, y: 13, color: "#a1a5c0" },
-    { x: 10, y: 13, color: "#ffffff" },
-    { x: 11, y: 13, color: "#696468" },
-    { x: 12, y: 13, color: "#676566" },
-    { x: 13, y: 13, color: "#a0a6bc" },
-    { x: 14, y: 13, color: "#ffffff" },
-    { x: 15, y: 13, color: "#a0a6bc" },
-    { x: 16, y: 13, color: "#171717" },
-
-    { x: 2, y: 14, color: "#171717" },
-    { x: 3, y: 14, color: "#171717" },
-    { x: 4, y: 14, color: "#2a2a2a" },
-    { x: 5, y: 14, color: "#2a2a2a" },
-    { x: 6, y: 14, color: "#424242" },
-    { x: 7, y: 14, color: "#424242" },
-    { x: 8, y: 14, color: "#424242" },
-    { x: 9, y: 14, color: "#9fa8b9" },
-    { x: 10, y: 14, color: "#ffffff" },
-    { x: 11, y: 14, color: "#9fa8b9" },
-    { x: 12, y: 14, color: "#656766" },
-    { x: 13, y: 14, color: "#9fa8b9" },
-    { x: 14, y: 14, color: "#ffffff" },
-    { x: 15, y: 14, color: "#9fa8b9" },
-    { x: 16, y: 14, color: "#292b2a" },
-
-    { x: 2, y: 15, color: "#171717" },
-    { x: 3, y: 15, color: "#171717" },
-    { x: 4, y: 15, color: "#2a2a2a" },
-    { x: 5, y: 15, color: "#2a2a2a" },
-    { x: 6, y: 15, color: "#424242" },
-    { x: 7, y: 15, color: "#424242" },
-    { x: 8, y: 15, color: "#424242" },
-    { x: 9, y: 15, color: "#5a6084" },
-    { x: 10, y: 15, color: "#ffffff" },
-    { x: 11, y: 15, color: "#5a6084" },
-    { x: 12, y: 15, color: "#66675f" },
-    { x: 13, y: 15, color: "#586084" },
-    { x: 14, y: 15, color: "#ffffff" },
-    { x: 15, y: 15, color: "#586084" },
-    { x: 16, y: 15, color: "#2a2a2a" },
-
-    { x: 2, y: 16, color: "#171717" },
-    { x: 3, y: 16, color: "#171717" },
-    { x: 4, y: 16, color: "#171717" },
-    { x: 5, y: 16, color: "#2a2a2a" },
-    { x: 6, y: 16, color: "#2a2a2a" },
-    { x: 7, y: 16, color: "#424242" },
-    { x: 8, y: 16, color: "#424242" },
-    { x: 9, y: 16, color: "#1e3352" },
-    { x: 10, y: 16, color: "#9fa8b9" },
-    { x: 11, y: 16, color: "#5a6080" },
-    { x: 12, y: 16, color: "#434240" },
-    { x: 13, y: 16, color: "#25304c" },
-    { x: 14, y: 16, color: "#9fa8b9" },
-    { x: 15, y: 16, color: "#595e88" },
-    { x: 16, y: 16, color: "#2a2a2a" },
-
-    { x: 2, y: 17, color: "#171717" },
-    { x: 3, y: 17, color: "#171717" },
-    { x: 4, y: 17, color: "#171717" },
-    { x: 5, y: 17, color: "#2a2a2a" },
-    { x: 6, y: 17, color: "#2a2a2a" },
-    { x: 7, y: 17, color: "#424242" },
-    { x: 8, y: 17, color: "#424242" },
-    { x: 9, y: 17, color: "#424242" },
-    { x: 10, y: 17, color: "#25334e" },
-    { x: 11, y: 17, color: "#424242" },
-    { x: 12, y: 17, color: "#424242" },
-    { x: 13, y: 17, color: "#424242" },
-    { x: 14, y: 17, color: "#26304b" },
-    { x: 15, y: 17, color: "#2a2a2c" },
-    { x: 16, y: 17, color: "#171717" },
-
-    { x: 3, y: 18, color: "#171717" },
-    { x: 4, y: 18, color: "#171717" },
-    { x: 5, y: 18, color: "#171717" },
-    { x: 6, y: 18, color: "#2a2a2a" },
-    { x: 7, y: 18, color: "#2a2a2a" },
-    { x: 8, y: 18, color: "#414141" },
-    { x: 9, y: 18, color: "#414141" },
-    { x: 10, y: 18, color: "#414141" },
-    { x: 11, y: 18, color: "#414141" },
-    { x: 12, y: 18, color: "#2a2a2a" },
-    { x: 13, y: 18, color: "#2a2a2a" },
-    { x: 14, y: 18, color: "#2a2a2a" },
-    { x: 15, y: 18, color: "#171717" },
-
-    { x: 3, y: 19, color: "#cc6c08" },
-    { x: 4, y: 19, color: "#f9c300" },
-    { x: 5, y: 19, color: "#cc6c08" },
-    { x: 6, y: 19, color: "#171717" },
-    { x: 7, y: 19, color: "#2b2b2b" },
-    { x: 8, y: 19, color: "#2b2b2b" },
-    { x: 9, y: 19, color: "#2b2b2b" },
-    { x: 10, y: 19, color: "#2b2b2b" },
-    { x: 11, y: 19, color: "#2b2b2b" },
-    { x: 12, y: 19, color: "#2b2b2b" },
-    { x: 13, y: 19, color: "#2b2b2b" },
-    { x: 14, y: 19, color: "#171717" },
-    { x: 15, y: 19, color: "#171717" },
-    { x: 16, y: 19, color: "#c96f00" },
-
-    { x: 2, y: 20, color: "#c67001" },
-    { x: 3, y: 20, color: "#ffbb06" },
-    { x: 4, y: 20, color: "#fbee40" },
-    { x: 5, y: 20, color: "#fbee40" },
-    { x: 6, y: 20, color: "#f9c300" },
-    { x: 7, y: 20, color: "#d36600" },
-    { x: 8, y: 20, color: "#181619" },
-    { x: 9, y: 20, color: "#2a2a2a" },
-    { x: 10, y: 20, color: "#2a2a2a" },
-    { x: 11, y: 20, color: "#2a2a2a" },
-    { x: 12, y: 20, color: "#191a1e" },
-    { x: 13, y: 20, color: "#191a1e" },
-    { x: 14, y: 20, color: "#191a1e" },
-    { x: 15, y: 20, color: "#c27300" },
-    { x: 16, y: 20, color: "#fcc302" },
-    { x: 17, y: 20, color: "#c27300" },
-
-    { x: 1, y: 21, color: "#cc6b0d" },
-    { x: 2, y: 21, color: "#fcc200" },
-    { x: 3, y: 21, color: "#fcc200" },
-    { x: 4, y: 21, color: "#faed46" },
-    { x: 5, y: 21, color: "#faed46" },
-    { x: 6, y: 21, color: "#faed46" },
-    { x: 7, y: 21, color: "#f9c203" },
-    { x: 8, y: 21, color: "#c96e05" },
-    { x: 9, y: 21, color: "#171717" },
-    { x: 10, y: 21, color: "#171717" },
-    { x: 11, y: 21, color: "#171717" },
-    { x: 12, y: 21, color: "#171717" },
-    { x: 13, y: 21, color: "#171717" },
-    { x: 14, y: 21, color: "#c67100" },
-    { x: 15, y: 21, color: "#f9c206" },
-    { x: 16, y: 21, color: "#f9c206" },
-    { x: 17, y: 21, color: "#ffef47" },
-    { x: 18, y: 21, color: "#fbc201" },
-
-    { x: 1, y: 22, color: "#98460a" },
-    { x: 2, y: 22, color: "#c96f00" },
-    { x: 3, y: 22, color: "#fbc200" },
-    { x: 4, y: 22, color: "#fbc200" },
-    { x: 5, y: 22, color: "#fded40" },
-    { x: 6, y: 22, color: "#fded40" },
-    { x: 7, y: 22, color: "#fbc106" },
-    { x: 8, y: 22, color: "#fbc106" },
-    { x: 9, y: 22, color: "#171717" },
-    { x: 10, y: 22, color: "#171717" },
-    { x: 11, y: 22, color: "#171717" },
-    { x: 12, y: 22, color: "#8f470d" },
-    { x: 13, y: 22, color: "#fbc200" },
-    { x: 14, y: 22, color: "#fbc200" },
-    { x: 15, y: 22, color: "#fbc200" },
-    { x: 16, y: 22, color: "#fded42" },
-    { x: 17, y: 22, color: "#fded42" },
-    { x: 18, y: 22, color: "#fcc101" },
-
-    { x: 2, y: 23, color: "#924801" },
-    { x: 3, y: 23, color: "#c96f00" },
-    { x: 4, y: 23, color: "#c96f00" },
-    { x: 5, y: 23, color: "#c96f00" },
-    { x: 6, y: 23, color: "#c96f00" },
-    { x: 7, y: 23, color: "#924801" },
-    { x: 11, y: 23, color: "#924801" },
-    { x: 12, y: 23, color: "#c86e00" },
-    { x: 13, y: 23, color: "#c86e00" },
-    { x: 14, y: 23, color: "#914700" },
-    { x: 15, y: 23, color: "#fbc201" },
-    { x: 16, y: 23, color: "#fbc201" },
-    { x: 17, y: 23, color: "#fbc201" },
-  ],
-  yoshi: [
-    { x: 13, y: 0, color: "#2c2b2c" },
-    { x: 14, y: 0, color: "#2c2b2c" },
-    { x: 16, y: 0, color: "#2c2b2c" },
-    { x: 17, y: 0, color: "#2c2b2c" },
-
-    { x: 12, y: 1, color: "#2c2b2c" },
-    { x: 13, y: 1, color: "#26b300" },
-    { x: 14, y: 1, color: "#10ff1c" },
-    { x: 15, y: 1, color: "#2c2b2c" },
-    { x: 16, y: 1, color: "#26b300" },
-    { x: 17, y: 1, color: "#10ff1c" },
-    { x: 18, y: 1, color: "#2c2b2c" },
-
-    { x: 11, y: 2, color: "#2c2b2c" },
-    { x: 12, y: 2, color: "#016f00" },
-    { x: 13, y: 2, color: "#26b300" },
-    { x: 14, y: 2, color: "#fefcfc" },
-    { x: 15, y: 2, color: "#fefcfc" },
-    { x: 16, y: 2, color: "#fefcfc" },
-    { x: 17, y: 2, color: "#fefcfc" },
-    { x: 18, y: 2, color: "#10ff1c" },
-    { x: 19, y: 2, color: "#2c2b2c" },
-
-    { x: 8, y: 3, color: "#2c2b2c" },
-    { x: 9, y: 3, color: "#2c2b2c" },
-    { x: 10, y: 3, color: "#2c2b2c" },
-    { x: 11, y: 3, color: "#2c2b2c" },
-    { x: 12, y: 3, color: "#016f00" },
-    { x: 13, y: 3, color: "#fefcfc" },
-    { x: 14, y: 3, color: "#fefcfc" },
-    { x: 15, y: 3, color: "#2c2b2c" },
-    { x: 16, y: 3, color: "#fefcfc" },
-    { x: 17, y: 3, color: "#2c2b2c" },
-    { x: 18, y: 3, color: "#fefcfc" },
-    { x: 19, y: 3, color: "#2c2b2c" },
-
-    { x: 7, y: 4, color: "#2c2b2c" },
-    { x: 8, y: 4, color: "#fe3217" },
-    { x: 9, y: 4, color: "#ff7e14" },
-    { x: 10, y: 4, color: "#ff7e14" },
-    { x: 11, y: 4, color: "#2c2b2c" },
-    { x: 12, y: 4, color: "#fefcfc" },
-    { x: 13, y: 4, color: "#fefcfc" },
-    { x: 14, y: 4, color: "#fefcfc" },
-    { x: 15, y: 4, color: "#2c2b2c" },
-    { x: 16, y: 4, color: "#fefcfc" },
-    { x: 17, y: 4, color: "#2c2b2c" },
-    { x: 18, y: 4, color: "#fefcfc" },
-    { x: 19, y: 4, color: "#2c2b2c" },
-
-    { x: 7, y: 5, color: "#2c2b2c" },
-    { x: 8, y: 5, color: "#9c1d00" },
-    { x: 9, y: 5, color: "#fe3217" },
-    { x: 10, y: 5, color: "#2c2b2c" },
-    { x: 11, y: 5, color: "#2c2b2c" },
-    { x: 12, y: 5, color: "#fefcfc" },
-    { x: 13, y: 5, color: "#fefcfc" },
-    { x: 14, y: 5, color: "#fefcfc" },
-    { x: 15, y: 5, color: "#fefcfc" },
-    { x: 16, y: 5, color: "#fefcfc" },
-    { x: 17, y: 5, color: "#fefcfc" },
-    { x: 18, y: 5, color: "#fefcfc" },
-    { x: 19, y: 5, color: "#2c2b2c" },
-    { x: 20, y: 5, color: "#2c2b2c" },
-    { x: 21, y: 5, color: "#2c2b2c" },
-
-    { x: 7, y: 6, color: "#2c2b2c" },
-    { x: 8, y: 6, color: "#2c2b2c" },
-    { x: 9, y: 6, color: "#2c2b2c" },
-    { x: 10, y: 6, color: "#10ff1c" },
-    { x: 11, y: 6, color: "#10ff1c" },
-    { x: 12, y: 6, color: "#016f00" },
-    { x: 13, y: 6, color: "#fefcfc" },
-    { x: 14, y: 6, color: "#fefcfc" },
-    { x: 15, y: 6, color: "#fefcfc" },
-    { x: 16, y: 6, color: "#016f00" },
-    { x: 17, y: 6, color: "#fefcfc" },
-    { x: 18, y: 6, color: "#2c2b2c" },
-    { x: 19, y: 6, color: "#10ff1c" },
-    { x: 20, y: 6, color: "#10ff1c" },
-    { x: 21, y: 6, color: "#10ff1c" },
-    { x: 22, y: 6, color: "#2c2b2c" },
-
-    { x: 6, y: 7, color: "#2c2b2c" },
-    { x: 7, y: 7, color: "#ff7e14" },
-    { x: 8, y: 7, color: "#2c2b2c" },
-    { x: 9, y: 7, color: "#26b300" },
-    { x: 10, y: 7, color: "#10ff1c" },
-    { x: 11, y: 7, color: "#fefcfc" },
-    { x: 12, y: 7, color: "#10ff1c" },
-    { x: 13, y: 7, color: "#016f00" },
-    { x: 14, y: 7, color: "#016f00" },
-    { x: 15, y: 7, color: "#016f00" },
-    { x: 16, y: 7, color: "#10ff1c" },
-    { x: 17, y: 7, color: "#016f00" },
-    { x: 18, y: 7, color: "#10ff1c" },
-    { x: 19, y: 7, color: "#10ff1c" },
-    { x: 20, y: 7, color: "#fefcfc" },
-    { x: 21, y: 7, color: "#fefcfc" },
-    { x: 22, y: 7, color: "#10ff1c" },
-    { x: 23, y: 7, color: "#2c2b2c" },
-
-    { x: 5, y: 8, color: "#2c2b2c" },
-    { x: 6, y: 8, color: "#9c1d00" },
-    { x: 7, y: 8, color: "#9c1d00" },
-    { x: 8, y: 8, color: "#2c2b2c" },
-    { x: 9, y: 8, color: "#016f00" },
-    { x: 10, y: 8, color: "#26b300" },
-    { x: 11, y: 8, color: "#fefcfc" },
-    { x: 12, y: 8, color: "#fefcfc" },
-    { x: 13, y: 8, color: "#fefcfc" },
-    { x: 14, y: 8, color: "#10ff1c" },
-    { x: 15, y: 8, color: "#26b300" },
-    { x: 16, y: 8, color: "#10ff1c" },
-    { x: 17, y: 8, color: "#10ff1c" },
-    { x: 18, y: 8, color: "#10ff1c" },
-    { x: 19, y: 8, color: "#2c2b2c" },
-    { x: 20, y: 8, color: "#fefcfc" },
-    { x: 21, y: 8, color: "#2c2b2c" },
-    { x: 22, y: 8, color: "#10ff1c" },
-    { x: 23, y: 8, color: "#2c2b2c" },
-
-    { x: 5, y: 9, color: "#2c2b2c" },
-    { x: 6, y: 9, color: "#9c1d00" },
-    { x: 7, y: 9, color: "#9c1d00" },
-    { x: 8, y: 9, color: "#2c2b2c" },
-    { x: 9, y: 9, color: "#016f00" },
-    { x: 10, y: 9, color: "#26b300" },
-    { x: 11, y: 9, color: "#fefcfc" },
-    { x: 12, y: 9, color: "#fefcfc" },
-    { x: 13, y: 9, color: "#fefcfc" },
-    { x: 14, y: 9, color: "#fefcfc" },
-    { x: 15, y: 9, color: "#2c2b2c" },
-    { x: 16, y: 9, color: "#26b300" },
-    { x: 17, y: 9, color: "#26b300" },
-    { x: 18, y: 9, color: "#10ff1c" },
-    { x: 19, y: 9, color: "#10ff1c" },
-    { x: 20, y: 9, color: "#10ff1c" },
-    { x: 21, y: 9, color: "#10ff1c" },
-    { x: 22, y: 9, color: "#10ff1c" },
-    { x: 23, y: 9, color: "#2c2b2c" },
-
-    { x: 6, y: 10, color: "#2c2b2c" },
-    { x: 7, y: 10, color: "#2c2b2c" },
-    { x: 8, y: 10, color: "#2c2b2c" },
-    { x: 9, y: 10, color: "#016f00" },
-    { x: 10, y: 10, color: "#26b300" },
-    { x: 11, y: 10, color: "#fefcfc" },
-    { x: 12, y: 10, color: "#fefcfc" },
-    { x: 13, y: 10, color: "#fefcfc" },
-    { x: 14, y: 10, color: "#fefcfc" },
-    { x: 15, y: 10, color: "#2c2b2c" },
-    { x: 16, y: 10, color: "#26b300" },
-    { x: 17, y: 10, color: "#26b300" },
-    { x: 18, y: 10, color: "#10ff1c" },
-    { x: 19, y: 10, color: "#10ff1c" },
-    { x: 20, y: 10, color: "#10ff1c" },
-    { x: 21, y: 10, color: "#10ff1c" },
-    { x: 22, y: 10, color: "#10ff1c" },
-    { x: 23, y: 10, color: "#2c2b2c" },
-
-    { x: 7, y: 11, color: "#2c2b2c" },
-    { x: 8, y: 11, color: "#fe3217" },
-    { x: 9, y: 11, color: "#2c2b2c" },
-    { x: 10, y: 11, color: "#016f00" },
-    { x: 11, y: 11, color: "#016f00" },
-    { x: 12, y: 11, color: "#ffba93" },
-    { x: 13, y: 11, color: "#ffba93" },
-    { x: 14, y: 11, color: "#2c2b2c" },
-    { x: 15, y: 11, color: "#2c2b2c" },
-    { x: 16, y: 11, color: "#016f00" },
-    { x: 17, y: 11, color: "#016f00" },
-    { x: 18, y: 11, color: "#26b300" },
-    { x: 19, y: 11, color: "#26b300" },
-    { x: 20, y: 11, color: "#26b300" },
-    { x: 21, y: 11, color: "#26b300" },
-    { x: 22, y: 11, color: "#26b300" },
-    { x: 23, y: 11, color: "#2c2b2c" },
-
-    { x: 8, y: 12, color: "#2c2b2c" },
-    { x: 9, y: 12, color: "#2c2b2c" },
-    { x: 10, y: 12, color: "#2c2b2c" },
-    { x: 11, y: 12, color: "#016f00" },
-    { x: 12, y: 12, color: "#016f00" },
-    { x: 13, y: 12, color: "#ffba93" },
-    { x: 14, y: 12, color: "#ffba93" },
-    { x: 15, y: 12, color: "#2c2b2c" },
-    { x: 16, y: 12, color: "#016f00" },
-    { x: 17, y: 12, color: "#016f00" },
-    { x: 18, y: 12, color: "#016f00" },
-    { x: 19, y: 12, color: "#016f00" },
-    { x: 20, y: 12, color: "#26b300" },
-    { x: 21, y: 12, color: "#26b300" },
-    { x: 22, y: 12, color: "#2c2b2c" },
-
-    { x: 8, y: 13, color: "#2c2b2c" },
-    { x: 9, y: 13, color: "#fe3217" },
-    { x: 10, y: 13, color: "#2c2b2c" },
-    { x: 11, y: 13, color: "#016f00" },
-    { x: 12, y: 13, color: "#26b300" },
-    { x: 13, y: 13, color: "#ffa5aa" },
-    { x: 14, y: 13, color: "#ffa5aa" },
-    { x: 15, y: 13, color: "#fefcfc" },
-    { x: 16, y: 13, color: "#2c2b2c" },
-    { x: 17, y: 13, color: "#016f00" },
-    { x: 18, y: 13, color: "#016f00" },
-    { x: 19, y: 13, color: "#016f00" },
-    { x: 20, y: 13, color: "#2c2b2c" },
-    { x: 21, y: 13, color: "#2c2b2c" },
-
-    { x: 5, y: 14, color: "#2c2b2c" },
-    { x: 6, y: 14, color: "#2c2b2c" },
-    { x: 7, y: 14, color: "#2c2b2c" },
-    { x: 8, y: 14, color: "#2c2b2c" },
-    { x: 9, y: 14, color: "#2c2b2c" },
-    { x: 10, y: 14, color: "#016f00" },
-    { x: 11, y: 14, color: "#26b300" },
-    { x: 12, y: 14, color: "#26b300" },
-    { x: 13, y: 14, color: "#ffa5aa" },
-    { x: 14, y: 14, color: "#ffa5aa" },
-    { x: 15, y: 14, color: "#2c2b2c" },
-    { x: 16, y: 14, color: "#2c2b2c" },
-    { x: 17, y: 14, color: "#2c2b2c" },
-    { x: 18, y: 14, color: "#2c2b2c" },
-    { x: 19, y: 14, color: "#2c2b2c" },
-
-    { x: 4, y: 15, color: "#2c2b2c" },
-    { x: 5, y: 15, color: "#ff7e14" },
-    { x: 6, y: 15, color: "#fefcfc" },
-    { x: 7, y: 15, color: "#2c2b2c" },
-    { x: 8, y: 15, color: "#2c2b2c" },
-    { x: 9, y: 15, color: "#2c2b2c" },
-    { x: 10, y: 15, color: "#016f00" },
-    { x: 11, y: 15, color: "#26b300" },
-    { x: 12, y: 15, color: "#fefcfc" },
-    { x: 13, y: 15, color: "#fefcfc" },
-    { x: 14, y: 15, color: "#fefcfc" },
-    { x: 15, y: 15, color: "#2c2b2c" },
-    { x: 16, y: 15, color: "#2c2b2c" },
-
-    { x: 2, y: 16, color: "#2c2b2c" },
-    { x: 3, y: 16, color: "#2c2b2c" },
-    { x: 4, y: 16, color: "#ff7e14" },
-    { x: 5, y: 16, color: "#ff7e14" },
-    { x: 6, y: 16, color: "#2c2b2c" },
-    { x: 7, y: 16, color: "#2c2b2c" },
-    { x: 8, y: 16, color: "#10ff1c" },
-    { x: 9, y: 16, color: "#10ff1c" },
-    { x: 10, y: 16, color: "#10ff1c" },
-    { x: 11, y: 16, color: "#10ff1c" },
-    { x: 12, y: 16, color: "#fefcfc" },
-    { x: 13, y: 16, color: "#fefcfc" },
-    { x: 14, y: 16, color: "#fefcfc" },
-    { x: 15, y: 16, color: "#2c2b2c" },
-    { x: 16, y: 16, color: "#fefcfc" },
-    { x: 17, y: 16, color: "#2c2b2c" },
-
-    { x: 0, y: 17, color: "#2c2b2c" },
-    { x: 1, y: 17, color: "#2c2b2c" },
-    { x: 2, y: 17, color: "#2c2b2c" },
-    { x: 3, y: 17, color: "#fefcfc" },
-    { x: 4, y: 17, color: "#2c2b2c" },
-    { x: 5, y: 17, color: "#2c2b2c" },
-    { x: 6, y: 17, color: "#26b300" },
-    { x: 7, y: 17, color: "#26b300" },
-    { x: 8, y: 17, color: "#10ff1c" },
-    { x: 9, y: 17, color: "#10ff1c" },
-    { x: 10, y: 17, color: "#2c2b2c" },
-    { x: 11, y: 17, color: "#fefcfc" },
-    { x: 12, y: 17, color: "#fefcfc" },
-    { x: 13, y: 17, color: "#fefcfc" },
-    { x: 14, y: 17, color: "#2c2b2c" },
-    { x: 15, y: 17, color: "#2c2b2c" },
-    { x: 16, y: 17, color: "#fefcfc" },
-    { x: 17, y: 17, color: "#10ff1c" },
-    { x: 18, y: 17, color: "#2c2b2c" },
-
-    { x: 0, y: 18, color: "#2c2b2c" },
-    { x: 1, y: 18, color: "#10ff1c" },
-    { x: 2, y: 18, color: "#26b300" },
-    { x: 3, y: 18, color: "#2c2b2c" },
-    { x: 4, y: 18, color: "#2c2b2c" },
-    { x: 5, y: 18, color: "#10ff1c" },
-    { x: 6, y: 18, color: "#10ff1c" },
-    { x: 7, y: 18, color: "#10ff1c" },
-    { x: 8, y: 18, color: "#10ff1c" },
-    { x: 9, y: 18, color: "#2c2b2c" },
-    { x: 10, y: 18, color: "#fefcfc" },
-    { x: 11, y: 18, color: "#fefcfc" },
-    { x: 12, y: 18, color: "#fefcfc" },
-    { x: 13, y: 18, color: "#2c2b2c" },
-    { x: 14, y: 18, color: "#2c2b2c" },
-    { x: 15, y: 18, color: "#10ff1c" },
-    { x: 16, y: 18, color: "#10ff1c" },
-    { x: 17, y: 18, color: "#10ff1c" },
-    { x: 18, y: 18, color: "#2c2b2c" },
-
-    { x: 0, y: 19, color: "#2c2b2c" },
-    { x: 1, y: 19, color: "#fefcfc" },
-    { x: 2, y: 19, color: "#016f00" },
-    { x: 3, y: 19, color: "#2c2b2c" },
-    { x: 4, y: 19, color: "#10ff1c" },
-    { x: 5, y: 19, color: "#10ff1c" },
-    { x: 6, y: 19, color: "#10ff1c" },
-    { x: 7, y: 19, color: "#10ff1c" },
-    { x: 8, y: 19, color: "#fefcfc" },
-    { x: 9, y: 19, color: "#fefcfc" },
-    { x: 10, y: 19, color: "#2c2b2c" },
-    { x: 11, y: 19, color: "#fefcfc" },
-    { x: 12, y: 19, color: "#fefcfc" },
-    { x: 13, y: 19, color: "#fefcfc" },
-    { x: 14, y: 19, color: "#2c2b2c" },
-    { x: 15, y: 19, color: "#2c2b2c" },
-    { x: 16, y: 19, color: "#10ff1c" },
-    { x: 17, y: 19, color: "#10ff1c" },
-    { x: 18, y: 19, color: "#2c2b2c" },
-
-    { x: 0, y: 20, color: "#2c2b2c" },
-    { x: 1, y: 20, color: "#fefcfc" },
-    { x: 2, y: 20, color: "#fefcfc" },
-    { x: 3, y: 20, color: "#2c2b2c" },
-    { x: 4, y: 20, color: "#26b300" },
-    { x: 5, y: 20, color: "#10ff1c" },
-    { x: 6, y: 20, color: "#10ff1c" },
-    { x: 7, y: 20, color: "#fefcfc" },
-    { x: 8, y: 20, color: "#fefcfc" },
-    { x: 9, y: 20, color: "#2c2b2c" },
-    { x: 10, y: 20, color: "#2c2b2c" },
-    { x: 11, y: 20, color: "#fefcfc" },
-    { x: 12, y: 20, color: "#fefcfc" },
-    { x: 13, y: 20, color: "#fefcfc" },
-    { x: 14, y: 20, color: "#2c2b2c" },
-    { x: 15, y: 20, color: "#2c2b2c" },
-    { x: 16, y: 20, color: "#10ff1c" },
-    { x: 17, y: 20, color: "#10ff1c" },
-    { x: 18, y: 20, color: "#2c2b2c" },
-
-    { x: 1, y: 21, color: "#2c2b2c" },
-    { x: 2, y: 21, color: "#fed1ad" },
-    { x: 3, y: 21, color: "#2c2b2c" },
-    { x: 4, y: 21, color: "#016f00" },
-    { x: 5, y: 21, color: "#26b300" },
-    { x: 6, y: 21, color: "#10ff1c" },
-    { x: 7, y: 21, color: "#10ff1c" },
-    { x: 8, y: 21, color: "#10ff1c" },
-    { x: 9, y: 21, color: "#10ff1c" },
-    { x: 10, y: 21, color: "#10ff1c" },
-    { x: 11, y: 21, color: "#2c2b2c" },
-    { x: 12, y: 21, color: "#fefcfc" },
-    { x: 13, y: 21, color: "#fefcfc" },
-    { x: 14, y: 21, color: "#fefcfc" },
-    { x: 15, y: 21, color: "#2c2b2c" },
-    { x: 16, y: 21, color: "#10ff1c" },
-    { x: 17, y: 21, color: "#2c2b2c" },
-
-    { x: 1, y: 22, color: "#2c2b2c" },
-    { x: 2, y: 22, color: "#fed1ad" },
-    { x: 3, y: 22, color: "#fefcfc" },
-    { x: 4, y: 22, color: "#2c2b2c" },
-    { x: 5, y: 22, color: "#016f00" },
-    { x: 6, y: 22, color: "#26b300" },
-    { x: 7, y: 22, color: "#26b300" },
-    { x: 8, y: 22, color: "#26b300" },
-    { x: 9, y: 22, color: "#2c2b2c" },
-    { x: 10, y: 22, color: "#fefcfc" },
-    { x: 11, y: 22, color: "#fefcfc" },
-    { x: 12, y: 22, color: "#fed1ad" },
-    { x: 13, y: 22, color: "#2c2b2c" },
-    { x: 14, y: 22, color: "#2c2b2c" },
-    { x: 15, y: 22, color: "#2c2b2c" },
-    { x: 16, y: 22, color: "#2c2b2c" },
-    { x: 17, y: 22, color: "#2c2b2c" },
-
-    { x: 2, y: 23, color: "#2c2b2c" },
-    { x: 3, y: 23, color: "#2c2b2c" },
-    { x: 4, y: 23, color: "#2c2b2c" },
-    { x: 5, y: 23, color: "#2c2b2c" },
-    { x: 6, y: 23, color: "#2c2b2c" },
-    { x: 7, y: 23, color: "#2c2b2c" },
-    { x: 8, y: 23, color: "#2c2b2c" },
-    { x: 9, y: 23, color: "#2c2b2c" },
-    { x: 10, y: 23, color: "#fed1ad" },
-    { x: 11, y: 23, color: "#fed1ad" },
-    { x: 12, y: 23, color: "#fed1ad" },
-    { x: 13, y: 23, color: "#ffba93" },
-    { x: 14, y: 23, color: "#2c2b2c" },
-
-    { x: 2, y: 24, color: "#2c2b2c" },
-    { x: 3, y: 24, color: "#a33000" },
-    { x: 4, y: 24, color: "#f65300" },
-    { x: 5, y: 24, color: "#f99200" },
-    { x: 6, y: 24, color: "#f99200" },
-    { x: 7, y: 24, color: "#2c2b2c" },
-    { x: 8, y: 24, color: "#ffba93" },
-    { x: 9, y: 24, color: "#ffba93" },
-    { x: 10, y: 24, color: "#2c2b2c" },
-    { x: 11, y: 24, color: "#2c2b2c" },
-    { x: 12, y: 24, color: "#2c2b2c" },
-
-    { x: 2, y: 25, color: "#2c2b2c" },
-    { x: 3, y: 25, color: "#a33000" },
-    { x: 4, y: 25, color: "#f65300" },
-    { x: 5, y: 25, color: "#f99200" },
-    { x: 6, y: 25, color: "#f99200" },
-    { x: 7, y: 25, color: "#2c2b2c" },
-    { x: 8, y: 25, color: "#2c2b2c" },
-    { x: 9, y: 25, color: "#2c2b2c" },
-    { x: 10, y: 25, color: "#f99200" },
-    { x: 11, y: 25, color: "#2c2b2c" },
-    { x: 12, y: 25, color: "#2c2b2c" },
-    { x: 13, y: 25, color: "#2c2b2c" },
-
-    { x: 1, y: 26, color: "#2c2b2c" },
-    { x: 2, y: 26, color: "#a33000" },
-    { x: 3, y: 26, color: "#a33000" },
-    { x: 4, y: 26, color: "#a33000" },
-    { x: 5, y: 26, color: "#f65300" },
-    { x: 6, y: 26, color: "#fefcfc" },
-    { x: 7, y: 26, color: "#f99200" },
-    { x: 8, y: 26, color: "#2c2b2c" },
-    { x: 9, y: 26, color: "#a33000" },
-    { x: 10, y: 26, color: "#f65300" },
-    { x: 11, y: 26, color: "#f99200" },
-    { x: 12, y: 26, color: "#f99200" },
-    { x: 13, y: 26, color: "#fefcfc" },
-    { x: 14, y: 26, color: "#2c2b2c" },
-
-    { x: 1, y: 27, color: "#2c2b2c" },
-    { x: 2, y: 27, color: "#a33000" },
-    { x: 3, y: 27, color: "#a33000" },
-    { x: 4, y: 27, color: "#f65300" },
-    { x: 5, y: 27, color: "#f99200" },
-    { x: 6, y: 27, color: "#f99200" },
-    { x: 7, y: 27, color: "#f99200" },
-    { x: 8, y: 27, color: "#2c2b2c" },
-    { x: 9, y: 27, color: "#a33000" },
-    { x: 10, y: 27, color: "#a33000" },
-    { x: 11, y: 27, color: "#f65300" },
-    { x: 12, y: 27, color: "#f65300" },
-    { x: 13, y: 27, color: "#f99200" },
-    { x: 14, y: 27, color: "#2c2b2c" },
-
-    { x: 1, y: 28, color: "#2c2b2c" },
-    { x: 2, y: 28, color: "#2c2b2c" },
-    { x: 3, y: 28, color: "#2c2b2c" },
-    { x: 4, y: 28, color: "#2c2b2c" },
-    { x: 5, y: 28, color: "#2c2b2c" },
-    { x: 6, y: 28, color: "#2c2b2c" },
-    { x: 7, y: 28, color: "#2c2b2c" },
-    { x: 8, y: 28, color: "#2c2b2c" },
-    { x: 9, y: 28, color: "#2c2b2c" },
-    { x: 10, y: 28, color: "#2c2b2c" },
-    { x: 11, y: 28, color: "#2c2b2c" },
-    { x: 12, y: 28, color: "#2c2b2c" },
-    { x: 13, y: 28, color: "#2c2b2c" },
-    { x: 14, y: 28, color: "#2c2b2c" },
-  ],
-};
-
-let config = {
-  width: 3,
-  height: 3,
-  color: "white",
-  drawing: true,
-  eraser: false,
-};
-var audioarr = [
-  [{name:'audioone',val:"./audio/audioone.wav"}, {name:'audiotwo',val:"./audio/audiotwo.wav"}, {name:'audiothree',val:"./audio/audiothree.wav"}],
-  [{name:'audiofour',val:"./audio/audiofour.wav"}, {name:'audiofive',val:"./audio/audiofive.wav"}, {name:'audiosix',val:"./audio/audiosix.wav"}],
-  [{name:'audioseven',val:"./audio/audioseven.wav"}, {name:'audioeight',val:"./audio/audioeight.wav"}, {name:'audionine',val:"./audio/audionine.wav"}],
-];
-
-let events = {
-  mousedown: false,
-};
-document.querySelector(".select-file").addEventListener("click", function (e) {
-  this.value = null;
-});
-document.querySelector(".select-file").addEventListener("change", function (e) {
-  let files = e.target.files;
-  let f = files[0];
-  let reader = new FileReader();
-
-  document.querySelector(".error").classList.remove("active");
-
-  reader.onload = (async function (file) {
-    if (
-      file.type == "image/png" ||
-      file.type == "image/jpg" ||
-      file.type == "image/gif" ||
-      file.type == "image/jpeg"
-    ) {
-      // Continue
-      const bitmap = await createImageBitmap(file);
-      const canvas = document.querySelector("canvas");
-      canvas.width = bitmap.width;
-      canvas.height = bitmap.height;
-      const ctx = canvas.getContext("2d");
-      ctx.clearRect(0, 0, 9999, 9999);
-      ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-      let constructPixelData = [];
-
-      for (let i = 0; i < config.width; ++i) {
-        for (let j = 0; j < config.height; ++j) {
-          let pixelData = canvas.getContext("2d").getImageData(i, j, 1, 1).data;
-
-          if (pixelData[3] !== 0) {
-            constructPixelData.push({
-              x: i,
-              y: j,
-              color: `rgb(${pixelData[0]} ${pixelData[1]} ${pixelData[2]})`,
-            });
+const arr=[
+	{y:0,audioname:"audiozero",file:'./audio/audiozero.wav'},
+	{y:1,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:2,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:3,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:4,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:5,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:6,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:7,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:8,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:9,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:10,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:11,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:12,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:13,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:14,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:15,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:16,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:17,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:18,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:19,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:20,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:21,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:22,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:23,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:24,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:25,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:26,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:27,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:28,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:29,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:30,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:31,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:32,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:33,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:34,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:35,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:36,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:37,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:38,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:39,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:40,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:41,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:42,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:43,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:44,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:45,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:46,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:47,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:48,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:49,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:50,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:51,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:52,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:53,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:54,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:55,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:56,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:57,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:58,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:59,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:60,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:61,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:62,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:63,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:64,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:65,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:66,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:67,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:68,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:69,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:70,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:71,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:72,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:73,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:74,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:75,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:76,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:77,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:78,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:79,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:80,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:81,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:82,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:83,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:84,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:85,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:86,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:87,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:88,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:89,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:90,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:91,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:92,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:93,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:94,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:95,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:96,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:97,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:98,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:99,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:100,audioname:"audio20",file:'./audio/audio20.wav'},
+
+
+	{y:101,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:102,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:103,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:104,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:105,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:106,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:107,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:108,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:109,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:110,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:111,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:112,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:113,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:114,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:115,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:116,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:117,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:118,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:119,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:120,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:121,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:122,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:123,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:124,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:125,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:126,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:127,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:128,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:129,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:130,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:131,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:132,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:133,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:134,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:135,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:136,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:137,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:138,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:139,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:140,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:141,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:142,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:143,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:144,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:145,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:146,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:147,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:148,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:149,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:150,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:151,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:152,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:153,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:154,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:155,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:156,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:157,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:158,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:159,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:160,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:161,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:162,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:163,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:164,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:165,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:166,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:167,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:168,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:169,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:170,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:171,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:172,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:173,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:174,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:175,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:176,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:177,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:178,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:179,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:180,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:181,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:182,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:183,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:184,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:185,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:186,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:187,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:188,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:189,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:190,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:191,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:192,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:193,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:194,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:195,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:196,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:197,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:198,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:199,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:200,audioname:"audio20",file:'./audio/audio20.wav'},
+
+
+	
+	{y:201,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:202,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:203,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:204,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:205,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:206,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:207,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:208,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:209,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:210,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:211,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:212,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:213,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:214,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:215,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:216,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:217,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:218,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:219,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:220,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:221,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:222,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:223,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:224,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:225,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:226,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:227,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:228,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:229,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:230,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:231,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:232,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:233,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:234,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:235,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:236,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:237,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:238,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:239,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:240,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:241,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:242,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:243,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:244,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:245,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:246,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:247,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:248,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:249,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:250,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:251,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:252,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:253,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:254,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:255,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:256,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:257,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:258,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:259,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:260,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:261,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:262,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:263,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:264,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:265,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:266,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:267,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:268,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:269,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:270,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:271,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:272,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:273,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:274,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:275,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:276,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:277,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:278,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:279,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:280,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:281,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:282,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:283,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:284,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:285,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:286,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:287,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:288,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:289,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:290,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:291,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:292,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:293,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:294,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:295,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:296,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:297,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:298,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:299,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:300,audioname:"audio20",file:'./audio/audio20.wav'},
+
+	
+	{y:301,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:302,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:303,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:304,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:305,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:306,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:307,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:308,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:309,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:310,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:311,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:312,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:313,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:314,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:315,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:316,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:317,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:318,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:319,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:320,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:321,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:322,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:323,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:324,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:325,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:326,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:327,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:328,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:329,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:330,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:331,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:332,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:333,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:334,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:335,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:336,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:337,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:338,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:339,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:340,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:341,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:342,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:343,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:344,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:345,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:346,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:347,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:348,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:349,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:350,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:351,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:352,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:353,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:354,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:355,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:356,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:357,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:358,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:359,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:360,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:361,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:362,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:363,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:364,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:365,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:366,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:367,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:368,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:369,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:370,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:371,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:372,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:373,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:374,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:375,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:376,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:377,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:378,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:379,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:380,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:381,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:382,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:383,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:384,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:385,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:386,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:387,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:388,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:389,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:390,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:391,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:392,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:393,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:394,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:395,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:396,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:397,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:398,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:399,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:400,audioname:"audio20",file:'./audio/audio20.wav'},
+
+
+
+	{y:401,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:402,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:403,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:404,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:405,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:406,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:407,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:408,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:409,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:410,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:411,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:412,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:413,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:414,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:415,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:416,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:417,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:418,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:419,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:420,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:421,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:422,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:423,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:424,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:425,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:426,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:427,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:428,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:429,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:430,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:431,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:432,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:433,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:434,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:435,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:436,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:437,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:438,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:439,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:440,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:441,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:442,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:443,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:444,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:445,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:446,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:447,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:448,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:449,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:450,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:451,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:452,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:453,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:454,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:455,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:456,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:457,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:458,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:459,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:460,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:461,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:462,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:463,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:464,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:465,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:466,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:467,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:468,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:469,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:470,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:471,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:472,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:473,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:474,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:475,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:476,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:477,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:478,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:479,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:480,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:481,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:482,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:483,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:484,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:485,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:486,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:487,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:488,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:489,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:490,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:491,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:492,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:493,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:494,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:495,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:496,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:497,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:498,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:499,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:500,audioname:"audio20",file:'./audio/audio20.wav'},
+	
+	{y:501,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:502,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:503,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:504,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:505,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:506,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:507,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:508,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:509,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:510,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:511,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:512,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:513,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:514,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:515,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:516,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:517,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:518,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:519,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:520,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:521,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:522,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:523,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:524,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:525,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:526,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:527,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:528,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:529,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:530,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:531,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:532,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:533,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:534,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:535,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:536,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:537,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:538,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:539,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:540,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:541,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:542,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:543,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:544,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:545,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:546,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:547,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:548,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:549,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:550,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:551,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:552,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:553,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:554,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:555,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:556,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:557,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:558,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:559,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:560,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:561,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:562,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:563,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:564,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:565,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:566,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:567,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:568,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:569,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:570,audioname:"audio20",file:'./audio/audio20.wav'},
+	{y:571,audioname:"audio21",file:'./audio/audio21.wav'},
+	{y:572,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:573,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:574,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:575,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:576,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:577,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:578,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:579,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:580,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:581,audioname:"audioone",file:'./audio/audioone.wav'},
+	{y:582,audioname:"audiotwo",file:'./audio/audiotwo.wav'},
+	{y:583,audioname:"audiothree",file:'./audio/audiothree.wav'},
+	{y:584,audioname:"audiofour",file:'./audio/audiofour.wav'},
+	{y:585,audioname:"audiofive",file:'./audio/audiofive.wav'},
+	{y:586,audioname:"audiosix",file:'./audio/audiosix.wav'},
+	{y:587,audioname:"audioseven",file:'./audio/audioseven.wav'},
+	{y:588,audioname:"audioeight",file:'./audio/audioeight.wav'},
+	{y:589,audioname:"audionine",file:'./audio/audionine.wav'},
+	{y:590,audioname:"audioten",file:'./audio/audioten.wav'},
+	{y:591,audioname:"audio11",file:'./audio/audio11.wav'},
+	{y:592,audioname:"audio12",file:'./audio/audio12.wav'},
+	{y:593,audioname:"audio13",file:'./audio/audio13.wav'},
+	{y:594,audioname:"audio14",file:'./audio/audio14.wav'},
+	{y:595,audioname:"audio15",file:'./audio/audio15.wav'},
+	{y:596,audioname:"audio16",file:'./audio/audio16.wav'},
+	{y:597,audioname:"audio17",file:'./audio/audio17.wav'},
+	{y:598,audioname:"audio18",file:'./audio/audio18.wav'},
+	{y:599,audioname:"audio19",file:'./audio/audio19.wav'},
+	{y:600,audioname:"audio20",file:'./audio/audio20.wav'},
+]
+// console.log(window.screen.availWidth)
+
+
+const rec=[]
+window.onload = function () {
+  var selectCanvas = document.getElementById("myCanvas");
+  var brushPalette = document.getElementById("brushPalette");
+  var w = window.innerWidth;
+  const canvas=document.getElementById("myCanvas")
+  canvas.width=w
+ 
+  console.log(canvas)
+//   console.log(w)
+
+  
+  if (selectCanvas) {
+    selectCanvas.addEventListener("mousedown", start, false);
+    selectCanvas.addEventListener("mouseup", stop, false);
+    selectCanvas.addEventListener("mousemove", draw, false);
+    brushPalette.addEventListener(
+      "click",
+      function (e) {
+        changeStroke(e, this);
+      },
+      false
+    );
+
+    var isDown = false;
+    var context = selectCanvas.getContext("2d");
+    var canvasX, canvasY;
+    context.lineWidth = 2;
+
+    function start(e) {
+      isDown = true;
+      context.beginPath();
+      canvasX = e.pageX - selectCanvas.offsetLeft;
+      canvasY = e.pageY - selectCanvas.offsetTop;
+      context.moveTo(canvasX, canvasY);
+    }
+
+    function draw(e) {
+      
+      if (isDown) {
+		
+        console.log(e);
+		
+        canvasX = e.pageX - selectCanvas.offsetLeft;
+        canvasY = e.pageY - selectCanvas.offsetTop;
+        context.lineTo(canvasX, canvasY);
+        context.strokeStyle = selectedColor.value;
+        context.stroke();
+		console.log(canvasX)
+		console.log(canvasY)
+		arr.forEach(element => {
+			if(element.y == canvasY){
+			console.log(element.audioname)
+			
+			var x = document.getElementById(element.audioname);
+			rec.push(element.audioname)
+			console.log(rec)
+		
+			x.play()
+		}
+		else{
+
+		}
+		});
+	
+	
+      }
+    }
+	
+    function stop(e) {
+      isDown = false;
+      context.closePath();
+    }
+
+    function changeStroke(e, obj) {
+      if (e.target.dataset.stroke) {
+        var parent = e.target.parentElement.children;
+        for (var i in parent) {
+          if (parent.hasOwnProperty(i)) {
+            if (e.target.className === parent[i].className) {
+              e.target.style.border = "2px dotted";
+            } else {
+              parent[i].style.border = "none";
+            }
           }
         }
-      }
-      constructPixelData.forEach(function (i) {
-        let getPixel = document.querySelector(
-          `.pixel[data-x-coordinate="${i.x}"][data-y-coordinate="${i.y}"]`
-        );
-        if (getPixel !== null) {
-          getPixel.setAttribute("data-color", i.color);
-          getPixel.style.background = i.color;
-        }
-      });
-    } else {
-      document.querySelector(".error").textContent =
-        "Please select a png, jpg or gif file to upload.";
-      document.querySelector(".error").classList.add("active");
-    }
-  })(f);
-});
-
-document.getElementById("pixel-art-area").style.width = `calc(${
-  0.825 * config.width
-}rem + ${config.height * 3}px)`;
-document.getElementById("pixel-art-area").style.height = `calc(${
-  0.825 * config.height
-}rem + ${config.width * 3}px)`;
-document.getElementById("pixel-art-options").style.width = `calc(${
-  0.825 * config.width
-}rem + ${config.height * 3}px)`;
-
-for (let i = 0; i < config.width; ++i) {
-  for (let j = 0; j < config.height; ++j) {
-    let createEl = document.createElement("div");
-    createEl.classList.add("pixel");
-    createEl.setAttribute("a", i);
-    createEl.setAttribute("b", j);
-    createEl.setAttribute("data-x-coordinate", j);
-    createEl.setAttribute("data-y-coordinate", i);
-    document.getElementById("pixel-art-area").appendChild(createEl);
-    console.log([i] + "" + [j]);
-    console.log(createEl);
-  }
-}
-
-document.querySelectorAll(".pixel").forEach(function (item) {
-  item.addEventListener("pointerdown", function (e) {
-    if (config.eraser === true) {
-      item.setAttribute("data-color", null);
-      item.style.background = `#191f2b`;
-    } else {
-      item.setAttribute("data-color", config.color);
-      item.style.background = `${config.color}`;
-      console.log("j");
-      console.log(item.getAttribute("a"));
-      let a = item.getAttribute("a");
-      let b = item.getAttribute("b");
-      console.log(audioarr[a][b]);
-      let audio = audioarr[a][b];
-console.log(      audio.name
-)  
-var x = document.getElementById(audio.name);
-play()
-function play(){
-  x.play()
-  console.log(x)
-}
-
-}
-    events.mousedown = true;
-  });
-});
-
-document
-  .getElementById("pixel-art-area")
-  .addEventListener("pointermove", function (e) {
-    if (
-      (config.drawing === true && events.mousedown === true) ||
-      (config.eraser === true && events.mousedown === true)
-    ) {
-      if (e.target.matches(".pixel")) {
-        if (config.eraser === true) {
-          e.target.setAttribute("data-color", null);
-          e.target.style.background = `#191f2b`;
-        } else {
-          e.target.setAttribute("data-color", config.color);
-          e.target.style.background = `${config.color}`;
-          console.log("click hua");
-          let a = e.target.getAttribute("a");
-          let b = e.target.getAttribute("b");
-          console.log(audioarr[a][b]);
-          let audio1 = audioarr[a][b];
-          var temp = document.getElementById(audio1.name);
-play()
-function play(){
-  temp.play()
-  // temp.play().autoplay()
-  console.log(temp)
-}
-          //   console.log(e.target.getAttribute("id"));
-          // console.log(e.target)
-          // console.log(element.getAttribute('id'))
-        }
+        context.lineWidth = e.target.dataset.stroke;
       }
     }
-  });
-
-document.body.addEventListener("pointerup", function (e) {
-  events.mousedown = false;
-});
-
-["click", "input"].forEach(function (item) {
-  document.querySelector(".color-picker").addEventListener(item, function () {
-    document.querySelector(".error").classList.remove("active");
-    config.color = this.value;
-    document.querySelectorAll(".colors > div").forEach(function (i) {
-      i.classList.remove("current");
-    });
-    this.classList.add("current");
-    config.eraser = false;
-    document.querySelector(".eraser-container").classList.remove("current");
-  });
-});
-
-document.querySelectorAll(".colors > div").forEach(function (item) {
-  document.querySelector(".error").classList.remove("active");
-  if (item.classList.contains("select-color")) {
-    return false;
-  } else {
-    item.addEventListener("click", function (e) {
-      document.querySelector(".color-picker").classList.remove("current");
-      document.querySelectorAll(".colors > div").forEach(function (i) {
-        i.classList.remove("current");
-      });
-      item.classList.add("current");
-      config.eraser = false;
-      config.color = `${item.getAttribute("data-color")}`;
-      document.querySelector(".eraser-container").classList.remove("current");
-    });
-  }
-});
-
-document.querySelector(".reset").addEventListener("click", function (e) {
-  document.querySelector(".error").classList.remove("active");
-  document.querySelectorAll(".pixel").forEach(function (item) {
-    item.setAttribute("data-color", null);
-    item.style.background = "#191f2b";
-  });
-});
-
-document
-  .querySelector(".prebuilt .prebuilt")
-  .addEventListener("click", function (e) {
-    document.querySelector(".error").classList.remove("active");
-    if (
-      document.querySelector(".prebuilt .options").classList.contains("active")
-    ) {
-      document.querySelector(".prebuilt .options").classList.remove("active");
-    } else {
-      document.querySelector(".prebuilt .options").classList.add("active");
-    }
-  });
-
-document.body.addEventListener("click", function (e) {
-  document.querySelector(".error").classList.remove("active");
-  if (!e.target.matches(".prebuilt.current")) {
-    document.querySelector(".prebuilt .options").classList.remove("active");
-  }
-});
-
-document.querySelectorAll(".options > .prebuilt").forEach(function (item) {
-  document.querySelector(".error").classList.remove("active");
-  item.addEventListener("pointerdown", function (e) {
-    let getPrebuilt = item.getAttribute("data-prebuilt");
-    document.querySelectorAll(".pixel").forEach(function (item) {
-      item.setAttribute("data-color", null);
-      item.style.background = "#191f2b";
-    });
-    if (typeof prebuilt[`${getPrebuilt}`] !== "undefined") {
-      prebuilt[`${getPrebuilt}`].forEach(function (i) {
-        let getPixel = document.querySelector(
-          `.pixel[data-x-coordinate="${i.x}"][data-y-coordinate="${i.y}"]`
-        );
-        if (getPixel !== null) {
-          getPixel.setAttribute("data-color", i.color);
-          getPixel.style.background = i.color;
-        }
-      });
-    }
-  });
-});
-
-document.querySelector(".eraser").addEventListener("click", function (e) {
-  document.querySelector(".error").classList.remove("active");
-  document.querySelectorAll(".colors > div").forEach(function (i) {
-    i.classList.remove("current");
-  });
-  document.querySelector(".color-picker").classList.remove("current");
-  if (this.classList.contains("current")) {
-    this.parentElement.classList.remove("current");
-    document.querySelector(".color > div").classList.add("current");
-    config.color = "white";
-    config.eraser = false;
-  } else {
-    this.parentElement.classList.add("current");
-    config.eraser = true;
-  }
-});
-
-document.querySelector(".generate-css").addEventListener("click", function (e) {
-  document.querySelector(".error").classList.remove("active");
-  document.getElementById("popup-pixel-art").innerHTML = `
-        <h2>Pixel Art Code</h2>
-        <p>Copy the code below to use this on your webpage</p>
-        <div class="close"><i class="fal fa-times"></i></div>`;
-
-  let boxShadow = `.pixelart {
-            width: 1px;
-            height: 1px;
-            transform: scale(5);
-            background: transparent;
-            box-shadow: `;
-
-  document.querySelectorAll(".pixel").forEach(function (item) {
-    if (
-      item.getAttribute("data-color") !== "null" &&
-      item.getAttribute("data-color") !== null
-    ) {
-      let x = item.getAttribute("data-x-coordinate");
-      let y = item.getAttribute("data-y-coordinate");
-      let color = item.getAttribute("data-color");
-
-      boxShadow += `${x}px ${y}px ${color}, `;
-    }
-  });
-  boxShadow = boxShadow.slice(0, -2);
-  boxShadow = `${boxShadow};
-    }`;
-
-  let boxShadowCode = `
-    &lt;<span class="token tag">div</span> <span class="token attr-name">class</span>="<span class="token attr-value">pixelart</span>">&lt;/<span class="token attr-name">div</span>>
-    &lt;<span class="token tag">style</span> <span class="token attr-name">type</span>="<span class="token attr-value">text/css</span>">
-    <span class="token selector">.pixelart</span> {
-        <span class="token property">width</span>: <span class="token number">1</span>px;
-        <span class="token property">height</span>: <span class="token number">1</span>px;
-        <span class="token property">transform</span>: scale(<span class="token number">20</span>);
-        <span class="token property">background</span>: transparent;
-        <span class="token property">box-shadow</span>: `;
-
-  document.querySelectorAll(".pixel").forEach(function (item) {
-    if (
-      item.getAttribute("data-color") !== "null" &&
-      item.getAttribute("data-color") !== null
-    ) {
-      let x = item.getAttribute("data-x-coordinate");
-      let y = item.getAttribute("data-y-coordinate");
-      let color = item.getAttribute("data-color");
-
-      boxShadowCode += `<span class="token number">${x}</span><span class="token unit">px</span> <span class="token number">${y}</span><span class="token unit">px</span> ${color}, `;
-    }
-  });
-
-  boxShadowCode = boxShadowCode.slice(0, -2);
-  boxShadowCode = `${boxShadowCode};
-    }
-    &lt;/<span class="token tag">style</span>>`;
-
-  let newStyle = document.createElement("style");
-  newStyle.innerHTML = boxShadow;
-  document.body.append(newStyle);
-
-  let newPixelArt = document.createElement("div");
-  newPixelArt.classList.add("pixelart");
-  document.getElementById("popup-pixel-art").append(newPixelArt);
-
-  let newCodeBlock = document.createElement("pre");
-  newCodeBlock.innerHTML = `<code>${boxShadowCode}</code>`;
-  document.getElementById("popup-pixel-art").append(newCodeBlock);
-
-  document.getElementById("popup-pixel-art").classList.add("active");
-});
-
-document.body.addEventListener("click", function (e) {
-  if (
-    (!parent(e.target, "#popup-pixel-art", 1).matches("#popup-pixel-art") &&
-      !e.target.matches("#popup-pixel-art") &&
-      !e.target.matches(".generate-css") &&
-      !e.target.matches(".generate-css-span")) ||
-    parent(e.target, ".close", 1).matches(
-      ".close" || e.target.matches(".close")
-    )
-  ) {
-    document.getElementById("popup-pixel-art").classList.remove("active");
-  }
-});
-
-const parent = function (el, match, last) {
-  var result = [];
-  for (var p = el && el.parentElement; p; p = p.parentElement) {
-    result.push(p);
-    if (p.matches(match)) {
-      break;
-    }
-  }
-  if (last == 1) {
-    return result[result.length - 1];
-  } else {
-    return result;
   }
 };
+function playrec() {
+	// var audio = document.getElementById("audio");
+	// audio.play();
+	const arr = [1,2,3,4,5];
+const delay = 500;
+              
+rec.forEach(
+    (el, i) => {
+      setTimeout(() => 
+	 {
+		var x = document.getElementById(el);
+		x.play()
+		console.log("i",i)
+		console.log(el)
+	 } 
+	
+	  , delay * i);
+    }
+);
+	
+  }
